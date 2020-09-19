@@ -19,7 +19,6 @@ public class Message {
     @JsonView(Views.Id.class)
     private Long id;
     @JsonView(Views.IdName.class)
-
     private String text;
 
     @Column(updatable = false)
