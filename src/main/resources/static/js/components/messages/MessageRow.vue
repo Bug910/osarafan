@@ -4,6 +4,7 @@
             <i>({{ message.id }})</i>
             {{ message.text }}
         </v-card-text>
+      <media v-if="message.link" :message="message"></media>
     <v-card-actions>
         <v-btn value="Edit" @click="edit" text small>Edit</v-btn>
         <v-btn @click="del" text small>X</v-btn>
@@ -13,9 +14,12 @@
 
 <script>
     import {mapActions} from 'vuex'
+    import Media from "../media/Media.vue";
+
     export default {
-        props: ['message','editMessage'],
-        methods: {
+      components: { Media },
+      props: ['message','editMessage'],
+      methods: {
             ...mapActions(['removeMessageAction']),
             edit() {
                 this.editMessage(this.message)

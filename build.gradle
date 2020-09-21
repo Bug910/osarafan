@@ -22,6 +22,7 @@ dependencies {
 	compile('org.postgresql:postgresql')
 	compile('org.projectlombok:lombok')
 	compile('javax.xml.bind:jaxb-api')
+	compile 'org.jsoup:jsoup:1.11.3'
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.1.RELEASE')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
